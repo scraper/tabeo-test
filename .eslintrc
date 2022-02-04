@@ -1,0 +1,30 @@
+{
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parserOptions": { "project": "./tsconfig.json" },
+    "rules": {
+      "indent": ["error", 2, { "SwitchCase": 1 }],
+      "quotes": ["warn", "single"],
+      "semi": ["error", "always"],
+      "no-unused-vars": [
+        "warn",
+        { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+      ],
+      "@typescript-eslint/no-var-requires": 0,
+      "@typescript-eslint/no-unused-vars": "error",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-floating-promises": ["error"]
+    }
+  }
+  

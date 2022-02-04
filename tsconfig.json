@@ -1,0 +1,24 @@
+{
+    "ts-node": {
+      "files": true
+    },
+    "compilerOptions": {
+      "allowJs": false,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "inlineSourceMap": false,
+      "lib": ["ES2018", "DOM"],
+      "module": "CommonJS",
+      "moduleResolution": "node",
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "outDir": "./dist",
+      "pretty": true,
+      "sourceMap": true,
+      "strictNullChecks": false,
+      "target": "ES2018",
+      "types": ["node"]
+    },
+    "exclude": ["playwright"]
+  }
+  
