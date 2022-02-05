@@ -8,10 +8,12 @@ export class TempEmail {
 
   async goto() {
     await this.page.goto('https://tempmailo.com/', { waitUntil: 'domcontentloaded' });
+    await this.emailInput.waitFor();
   }
 
   async getTempEmail() {
     const email = await this.emailInput.inputValue();
+    console.log(email);
     return email;
   }
 }
