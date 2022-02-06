@@ -8,6 +8,7 @@ export class CheckoutPage {
   cardInput = this.page.locator('[id="cardNumber"]');
   cardExpiry = this.page.locator('[id="cardExpiry"]');
   cardCvc = this.page.locator('[id="cardCvc"]');
+  billingName = this.page.locator('[id="billingName"]');
   subscribeBtn = this.page.locator('//button[contains(@class,"SubmitButton")]');
 
   async waitToLoad() {
