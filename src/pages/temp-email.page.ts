@@ -12,7 +12,7 @@ export class TempEmail {
 
   async getTempEmail() {
     const email = await this.emailInput.innerText();
-    console.log(email);
+    // console.log(email);
     return email;
   }
 }
