@@ -24,7 +24,6 @@ export class CheckoutPage {
     .frameLocator('[id="challengeFrame"]')
     .frameLocator('//iframe[@class="FullscreenFrame"]')
     .locator('text=Complete authentication');
-  // .frameLocator('//iframe[@class="FullscreenFrame"]')
 
   failAuthBtn = this.page
     .frameLocator('//iframe[@class="FullscreenFrame"]')
@@ -45,9 +44,7 @@ export class CheckoutPage {
     await this.cardCvc.fill(cardCvc);
     await this.billingName.fill(billingName);
     await this.subscribeBtn.click();
-    // await this.page.pause();
 
-    // await this.page.waitForNavigation({ waitUntil: 'networkidle' });
     await this.firstFrame.waitFor();
     await this.secondFrame.waitFor();
     await this.dSecureFrame.waitFor();
