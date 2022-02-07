@@ -47,7 +47,6 @@ test.describe('Buy icons', async () => {
     const checkoutPage = new CheckoutPage(page);
     await checkoutPage.waitToLoad();
     await checkoutPage.enterCardDetails('4000008260003178');
-    await page.pause();
     await checkoutPage.cardDeclinedErrMsg.waitFor();
     await expect(checkoutPage.cardDeclinedErrMsg).toBeVisible();
   });
