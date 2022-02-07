@@ -20,7 +20,7 @@ export const signIn = async (page: Page) => {
 
   await tempEmailPage.emailTitle.waitFor();
   await tempEmailPage.emailTitle.click();
-  const signInLinkEl = tempEmailPage.emailFrame.locator('a:text("Sign in")');
+  const signInLinkEl = emailPage.locator('a:text("Sign in")');
   const link = await signInLinkEl.getAttribute('href');
 
   await emailPage.close();
