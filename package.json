@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "playwright test --headed --timeout 100000",
+    "test:headless": "playwright test"
   },
   "author": "",
   "license": "ISC",
