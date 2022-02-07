@@ -16,6 +16,7 @@ test.describe('Buy icons', async () => {
     await checkoutPage.enterCardDetails('4000002760003184');
 
     const thankYouPage = new ThankYouPage(page);
+    await thankYouPage.waitToLoad();
     await expect(thankYouPage.successMsg).toBeVisible();
     await expect(thankYouPage.license).toBeVisible();
     await expect(thankYouPage.monthlyPriceDetails).toBeVisible();
@@ -32,6 +33,7 @@ test.describe('Buy icons', async () => {
     await checkoutPage.enterCardDetails('4000002760003184');
 
     const thankYouPage = new ThankYouPage(page);
+    await thankYouPage.waitToLoad();
     await expect(thankYouPage.successMsg).toBeVisible();
     await expect(thankYouPage.license).toBeVisible();
     await expect(thankYouPage.singlePriceDetails).toBeVisible();
