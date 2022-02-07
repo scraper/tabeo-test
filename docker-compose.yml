@@ -1,0 +1,10 @@
+version: '3'
+services:
+  playwright:
+    build: .
+    container_name: tabeo-test
+    hostname: tabeo-test
+    privileged: true
+    command: bash -c "npm run test:headless && npx playwright show-report"
+    ports:
+      - 9323:9323
