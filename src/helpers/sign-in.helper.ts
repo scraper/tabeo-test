@@ -19,8 +19,9 @@ export const signIn = async (page: Page) => {
   await signInDialog.loginWithEmailBtn.click();
 
   await tempEmailPage.emailTitle.waitFor();
-  await tempEmailPage.emailTitle.click();
-  const signInLinkEl = emailPage.locator('a:text("Sign in")');
+  const signInLinkEl = emailPage.locator(
+    '//a[contains(@href, "https://qa-challenge-tabeo.vercel.app/")]'
+  );
   const link = await signInLinkEl.getAttribute('href');
 
   await emailPage.close();
